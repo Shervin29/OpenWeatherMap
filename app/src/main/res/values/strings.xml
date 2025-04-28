@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OpenWeatherMap</string>
+    <string name="view_forecast">View Forecast</string>
+    <string name="error_loading_data">Error loading data. Please try again.</string>
+
+    <string name="info_temp_format_value">%d°C</string>
+    <string name="error_missing_location">Error: Location data not received correctly.</string>
+    <string name="info_desc_format">%s</string>
+    <string name="weather_icon_description">Weather icon representing current conditions.</string>
+</resources>

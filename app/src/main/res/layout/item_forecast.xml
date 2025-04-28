@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <!-- Forecast Date/Time -->
+            <TextView
+                android:id="@+id/item_forecast_datetime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                tools:text="Mon, Apr 14, 9:00 PM" />
+
+            <!-- Weather Icon -->
+            <ImageView
+                android:id="@+id/item_forecast_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_forecast_datetime"
+                android:contentDescription="@string/weather_icon_description"
+                tools:srcCompat="@mipmap/ic_launcher" />
+
+            <!-- Temperature -->
+            <TextView
+                android:id="@+id/item_forecast_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                app:layout_constraintStart_toEndOf="@id/item_forecast_icon"
+                app:layout_constraintTop_toTopOf="@id/item_forecast_icon"
+                app:layout_constraintBottom_toBottomOf="@id/item_forecast_icon"
+                tools:text="15°C" />
+
+            <!-- Weather Description -->
+            <TextView
+                android:id="@+id/item_forecast_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:gravity="start|center_vertical"
+                app:layout_constraintStart_toEndOf="@id/item_forecast_temp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/item_forecast_temp"
+                app:layout_constraintBottom_toBottomOf="@id/item_forecast_temp"
+                tools:text="Scattered Clouds With Some Rain" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

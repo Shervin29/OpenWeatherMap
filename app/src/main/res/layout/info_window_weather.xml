@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            tools:text="Toronto"/>
+
+        <TextView
+            android:id="@+id/info_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"
+            tools:text="Temp: 12°C"/>
+
+        <TextView
+            android:id="@+id/info_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"
+            tools:text="Desc: Mostly Cloudy"/>
+
+        <ImageView
+            android:id="@+id/info_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/weather_icon_description"/>
+
+    </LinearLayout>
+
+</layout>
